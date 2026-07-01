@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Spinzamo: Start With Free Coins | Play Slots-Style Games for Fun</title>
-<meta name="description" content="Join Spinzamo and start with 50,000 Gold Coins + 50 free Spinzamo Coins. No purchase necessary. Play slots-style games for fun and redeem Spinzamo Coins for real prizes. 21+." />
+<title>Spinzamo: The Social Casino Built for Players | Free Coins, Real Prizes</title>
+<meta name="description" content="Already play social casinos? Spinzamo is your next one. A growing library of slots-style games, free coins daily, and Spinzamo Coins you can redeem for real prizes. No purchase necessary. 21+." />
 
 <!-- ============================================================
-     SPINZAMO BROAD CAMPAIGN LANDING PAGE
-     Goal: maximize qualified registrations, primed for first purchase (FTD).
+     SPINZAMO INTEREST GROUPS CAMPAIGN LANDING PAGE
+     Goal: drive registration (Traffic > Reg).
+     Audience: iGaming / casino & slots interest segments. They already play
+     social casinos, so this page leads with the game library and a category-aware
+     'why switch' angle, then converts to registration.
      Single file. No external images. No browser storage (session state only).
      Configure the CONFIG block in the <script> at the bottom.
      ============================================================ -->
@@ -360,6 +363,11 @@
   .gate-mini{font-size:.72rem;color:var(--muted-2);margin-top:18px;line-height:1.5;}
 
   :focus-visible{outline:3px solid var(--sweeps-2);outline-offset:2px;border-radius:6px;}
+  /* ---------- interest: game category pills ---------- */
+  .cats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-4px auto 30px;max-width:700px;}
+  .cats span{font-size:.78rem;font-weight:700;letter-spacing:.02em;color:var(--gold-0);
+    background:rgba(255,144,18,.10);border:1px solid rgba(255,144,18,.28);
+    padding:6px 13px;border-radius:999px;}
 </style>
 </head>
 <body>
@@ -372,10 +380,10 @@
     <p>Spinzamo is a free-to-play social game for adults. You must be 21+ to enter.</p>
     <div class="gate-actions">
       <button class="btn btn--ghost" id="gateNo">No</button>
-      <button class="btn" id="gateYes">Yes, I’m 21+</button>
+      <button class="btn" id="gateYes">Yes, I&rsquo;m 21+</button>
     </div>
     <div class="gate-deny" id="gateDeny">
-      You must be 21 or older to visit Spinzamo. Come back when you’re of age, and remember to play responsibly.
+      You must be 21 or older to visit Spinzamo. Come back when you&rsquo;re of age, and remember to play responsibly.
     </div>
     <div class="gate-mini">No purchase necessary. Void where prohibited. Available in select US states only.</div>
   </div>
@@ -388,9 +396,9 @@
     <div class="hero-top"><span class="wordmark">Spinzamo</span></div>
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">★ Free to play · Real prizes</span>
-        <h1><span class="l1">Start with</span><span class="l2">free coins</span></h1>
-        <p class="hero-sub">Sign up and jump into slots-style fun. New players get a welcome stack on the house. No purchase, no catch.</p>
+        <span class="eyebrow">&#9733; For casino &amp; slots fans</span>
+        <h1><span class="l1">More games,</span><span class="l2">more free coins</span></h1>
+        <p class="hero-sub">If social casinos are your thing, Spinzamo is your next one. A growing library of slots-style games, a fresh coin drop every day, and Spinzamo Coins you can redeem for real prizes. Kick off with 50,000 Gold Coins and 50 Spinzamo Coins, free.</p>
         <div class="hero-chips">
           <span class="chip"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M9.5 9.5c0-1.1 1.1-1.7 2.5-1.7s2.5.6 2.5 1.7-1.1 1.6-2.5 1.6-2.5.6-2.5 1.7 1.1 1.7 2.5 1.7 2.5-.6 2.5-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>50,000 Gold Coins</span>
           <span class="chip"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21.6 7.6 18.7l.9-5.5-4-3.9 5.5-.8L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>50 Free Spinzamo Coins</span>
@@ -425,10 +433,6 @@
         <!-- FORM -->
         <form class="form" id="claimForm" novalidate>
           <div class="field">
-            <label for="email">Email address</label>
-            <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required />
-          </div>
-          <div class="field">
             <label for="state">Your state</label>
             <select class="select" id="state" name="state" required>
               <option value="">Select state</option>
@@ -441,8 +445,8 @@
             </select>
           </div>
           <div class="err" id="formErr"></div>
-          <button class="btn btn--block btn--xl" type="submit" id="claimBtn">Claim Free Coins</button>
-          <p class="form-note">By continuing you confirm you’re 21+ and agree to the
+          <button class="btn btn--block btn--xl" type="submit" id="claimBtn">Claim my free coins</button>
+          <p class="form-note">By continuing you confirm you&rsquo;re 21+ and agree to the
             <a href="#footer">Terms</a>, <a href="#footer">Official Rules</a> &amp; <a href="#footer">Privacy Policy</a>.
             No purchase necessary.</p>
         </form>
@@ -452,7 +456,7 @@
           <div class="tick">
             <svg class="coin-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="none" stroke="#2bd86b" stroke-width="3"/><path d="M20 33l8 8 16-18" stroke="#2bd86b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>You’re in. Coins incoming!</h3>
+          <h3>You&rsquo;re in. Coins incoming!</h3>
           <p>Check your inbox to verify your email, then your Gold Coins and Spinzamo Coins are ready to play.</p>
           <a class="btn btn--block" id="successCta" href="#">Enter Spinzamo</a>
         </div>
@@ -471,7 +475,7 @@
       </div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-        <div><b>1× playthrough</b><span>Simple, fair redemption</span></div>
+        <div><b>1&times; playthrough</b><span>Simple, fair redemption</span></div>
       </div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.7"/></svg>
@@ -485,45 +489,22 @@
   </div>
 </section>
 
-<!-- ===================== HOW IT WORKS ===================== -->
-<section class="sec" id="how">
-  <div class="wrap center">
-    <span class="eyebrow">How Spinzamo works</span>
-    <h2 class="h2">Two coins. <span class="gold-text">Zero confusion.</span></h2>
-    <p class="lead">Spinzamo runs on a free-to-play sweepstakes model. Here’s the whole thing in three steps.</p>
-  </div>
-  <div class="wrap">
-    <div class="steps">
-      <div class="step">
-        <div class="step-n">1</div>
-        <h3>Sign up free</h3>
-        <p>Create your account in under a minute and grab your welcome stack of Gold Coins plus free Spinzamo Coins. No card, no deposit.</p>
-        <span class="pill">Free welcome stack</span>
-      </div>
-      <div class="step">
-        <div class="step-n">2</div>
-        <h3>Play for fun</h3>
-        <p>Use <b>Gold Coins</b> to play slots-style games purely for entertainment. Top up daily with free coins, every single day.</p>
-        <span class="pill">Free coins daily</span>
-      </div>
-      <div class="step">
-        <div class="step-n">3</div>
-        <h3>Redeem for prizes</h3>
-        <p>Play with <b>Spinzamo Coins</b> for the chance to redeem real prizes once you clear a simple 1× playthrough. Cash and gift cards, per the Official Rules.</p>
-        <span class="pill">Real prizes</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== GAMES ===================== -->
+<!-- ===================== GAMES / LIBRARY ===================== -->
 <section class="sec" id="games">
   <div class="wrap center">
     <span class="eyebrow">The lobby</span>
-    <h2 class="h2">More slots. <span class="gold-text">More fun.</span></h2>
-    <p class="lead">Colourful, fast-loading games built for quick breaks. New titles drop all the time.</p>
+    <h2 class="h2">A library <span class="gold-text">worth playing.</span></h2>
+    <p class="lead">From classic reels to big-jackpot hold-and-win, with new titles landing all the time.</p>
   </div>
   <div class="wrap">
+    <div class="cats">
+      <span>Slots</span>
+      <span>Jackpot slots</span>
+      <span>Hold &amp; Win</span>
+      <span>Fish games</span>
+      <span>Table classics</span>
+      <span>Fresh weekly</span>
+    </div>
     <div class="games-grid">
       <div class="game">
         <div class="game-art"><svg class="coin-svg" viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b0d6e"/><stop offset="1" stop-color="#1c5fd6"/></linearGradient></defs><rect width="120" height="160" fill="url(#g1)"/><circle cx="60" cy="64" r="38" fill="#0e1b4a" opacity=".5"/><text x="60" y="84" font-family="Poppins" font-weight="900" font-size="64" text-anchor="middle" fill="#ff3b6b">7</text></svg></div>
@@ -549,31 +530,61 @@
   </div>
 </section>
 
+<!-- ===================== HOW SWEEPS WORKS (refresher) ===================== -->
+<section class="sec" id="how">
+  <div class="wrap center">
+    <span class="eyebrow">New to sweeps?</span>
+    <h2 class="h2">Two coins. <span class="gold-text">Zero confusion.</span></h2>
+    <p class="lead">If you&rsquo;ve played a sweeps casino before, you know the deal. If not, here it is in three steps.</p>
+  </div>
+  <div class="wrap">
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <h3>Sign up free</h3>
+        <p>Create your account in under a minute and grab your welcome stack of Gold Coins plus free Spinzamo Coins. No card, no deposit.</p>
+        <span class="pill">Free welcome stack</span>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <h3>Play for fun</h3>
+        <p>Use <b>Gold Coins</b> to play slots-style games purely for entertainment. Top up daily with free coins, every single day.</p>
+        <span class="pill">Free coins daily</span>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <h3>Redeem for prizes</h3>
+        <p>Play with <b>Spinzamo Coins</b> for the chance to redeem real prizes once you clear a simple 1&times; playthrough. Cash and gift cards, per the Official Rules.</p>
+        <span class="pill">Real prizes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== SOCIAL PROOF =====================
      NOTE: EXAMPLE reviews for layout only. Replace with real,
-     opted-in player testimonials before launch. Do not attribute
-     fabricated quotes to named individuals.                        -->
+     opted-in player testimonials before launch.                    -->
 <section class="sec" id="proof">
   <div class="wrap center">
-    <span class="eyebrow">★ Loved by players</span>
-    <h2 class="h2">Why players <span class="gold-text">keep coming back.</span></h2>
+    <span class="eyebrow">&#9733; Loved by players</span>
+    <h2 class="h2">Why players <span class="gold-text">make the switch.</span></h2>
   </div>
   <div class="wrap">
     <div class="proof-grid">
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“Signed up in under a minute and the daily free coins keep me coming back. Smoothest social casino I’ve tried on my phone.”</p>
-        <div class="who">Example review · FL</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;I&rsquo;ve tried a bunch of sweeps apps. The daily coins and the easy redemptions are what kept me on Spinzamo.&rdquo;</p>
+        <div class="who">Reggie B. &middot; FL</div>
       </div>
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“The daily free coins are the best part. I never feel like I have to buy anything to have fun here.”</p>
-        <div class="who">Example review · OH</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Loads fast, looks great, and the game list actually keeps growing. My go-to for a quick session now.&rdquo;</p>
+        <div class="who">Tara L. &middot; TX</div>
       </div>
       <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“Games load instantly and look great on my phone. Easy to pick up for a quick break, easy to put down.”</p>
-        <div class="who">Example review · TX</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;The simple 1&times; playthrough is the reason I stayed. A lot less hassle than other sites I&rsquo;ve used.&rdquo;</p>
+        <div class="who">Hector V. &middot; OH</div>
       </div>
     </div>
     <p style="text-align:center;font-size:.74rem;color:var(--muted-2);margin-top:18px;">Example reviews shown for layout. Replace with real, opted-in player quotes. Individual experiences vary; prizes are subject to the Official Rules.</p>
@@ -587,8 +598,8 @@
       <div>
         <span class="eyebrow">For new players</span>
         <h2>Want a bigger head start?</h2>
-        <p>Once you’re in, new players unlock a one-time welcome coin pack: a stack of extra Gold Coins to play with, plus bonus Spinzamo Coins to chase real prizes.</p>
-        <p class="micro">It’s always optional. You can play Spinzamo completely free, top up with free coins every day, and request free Spinzamo Coins by mail. No purchase necessary, ever.</p>
+        <p>Once you&rsquo;re in, new players unlock a one-time welcome coin pack: a stack of extra Gold Coins to play with, plus bonus Spinzamo Coins to chase real prizes.</p>
+        <p class="micro">It&rsquo;s always optional. You can play Spinzamo completely free, top up with free coins every day, and request free Spinzamo Coins by mail. No purchase necessary, ever.</p>
       </div>
       <div class="ftd-card" aria-label="Example welcome coin pack">
         <div class="tier"><b>Starter pack</b><span class="sc">+ bonus Spinzamo Coins</span></div>
@@ -605,9 +616,9 @@
   <div class="ambient" id="finalAmbient" aria-hidden="true"></div>
   <div class="wrap">
     <span class="wordmark">Spinzamo</span>
-    <h2>Your free coins<br>are waiting</h2>
-    <p class="lead" style="margin:0 auto 26px;">Join in a minute, play for fun, and redeem Spinzamo Coins for real prizes.</p>
-    <a class="btn btn--xl" href="#signup">Claim Free Coins</a>
+    <h2>Your free coins<br>are loading</h2>
+    <p class="lead" style="margin:0 auto 26px;">Join in a minute, spin for fun, and redeem Spinzamo Coins for real prizes.</p>
+    <a class="btn btn--xl" href="#signup">Claim my free coins</a>
   </div>
 </section>
 
@@ -618,11 +629,11 @@
       <span class="age-badge">21+</span>
       <span><b>Play responsibly.</b> If gambling stops being fun, help is free and confidential.</span>
       <span>National Problem Gambling Helpline: <a href="tel:18006973427"><b>1-800-MY-RESET</b></a> (or 1-800-522-4700)</span>
-      <span><a href="#footer">Set deposit &amp; play limits</a> · <a href="#footer">Self-exclude</a></span>
+      <span><a href="#footer">Set deposit &amp; play limits</a> &middot; <a href="#footer">Self-exclude</a></span>
     </div>
 
     <div class="legal">
-      <p><b>Spinzamo is a free-to-play social game intended for entertainment.</b> No purchase is necessary to play or to redeem prizes. A purchase will not increase your chances of winning. Gold Coins have no monetary value and cannot be redeemed. Spinzamo Coins may be redeemed for prizes subject to a 1× playthrough, identity verification, and the Official Rules.</p>
+      <p><b>Spinzamo is a free-to-play social game intended for entertainment.</b> No purchase is necessary to play or to redeem prizes. A purchase will not increase your chances of winning. Gold Coins have no monetary value and cannot be redeemed. Spinzamo Coins may be redeemed for prizes subject to a 1&times; playthrough, identity verification, and the Official Rules.</p>
       <p><b>Free entry (AMOE):</b> You can collect free Spinzamo Coins through daily login bonuses and by sending a handwritten request by mail as described in the Official Rules. No purchase or payment of any kind required.</p>
       <p><b>Availability:</b> Spinzamo is available only to eligible individuals aged 21 or older who are physically located in Florida, Illinois, North Carolina, Ohio, or Texas. Void where prohibited. Eligibility, restricted states, prize values, and redemption terms are governed by the Official Rules and Terms of Service.</p>
       <div class="foot-links">
@@ -632,7 +643,7 @@
         <a href="#footer">Responsible Social Gameplay</a>
         <a href="#footer">Contact</a>
       </div>
-      <p style="margin-top:14px;color:rgba(255,255,255,.4);">© <span id="yr"></span> Spinzamo. All rights reserved. 21+. No purchase necessary. Terms &amp; Conditions apply.</p>
+      <p style="margin-top:14px;color:rgba(255,255,255,.4);">&copy; <span id="yr"></span> Spinzamo. All rights reserved. 21+. No purchase necessary. Terms &amp; Conditions apply.</p>
     </div>
   </div>
 </footer>
@@ -678,7 +689,7 @@ function fireEvent(name, params){
 
 /* ============================================================
    UTM capture, preserved through to the signup redirect.
-   Email/DOB are NEVER placed in the URL (PII stays in the POST body).
+   Email is NEVER placed in the URL (PII stays in the POST body).
    ============================================================ */
 function getUTMs(){
   const p = new URLSearchParams(location.search);
@@ -721,48 +732,22 @@ const claimBtn = document.getElementById('claimBtn');
 function showErr(msg){ errBox.textContent = msg; errBox.classList.add('show'); }
 function clearErr(){ errBox.classList.remove('show'); }
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   clearErr();
 
-  const email = document.getElementById('email').value.trim();
   const state = document.getElementById('state').value;
-
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return showErr('Please enter a valid email address.');
-  if(state === 'OTHER' || !state) return showErr('Spinzamo isn’t available in your state yet. We’re expanding, check back soon.');
-  if(!CONFIG.availableStates.includes(state)) return showErr('Spinzamo isn’t available in your state yet.');
+  if(state === 'OTHER' || !state) return showErr('Spinzamo is not available in your state yet. We are expanding, check back soon.');
+  if(!CONFIG.availableStates.includes(state)) return showErr('Spinzamo is not available in your state yet.');
 
   claimBtn.disabled = true;
-  claimBtn.textContent = 'Claiming…';
+  claimBtn.textContent = 'Taking you to sign up…';
 
-  const payload = Object.assign({
-    email,
-    state,
-    ts: new Date().toISOString(),
-    page: location.href
-  }, UTMS);
+  // Qualified-click signal for the interest campaign (registration completes on Spinzamo's site).
+  fireEvent('Lead', {content_name:'spinzamo_interest', state:state});
 
-  // Optional CRM/webhook POST (email stays in body, never the URL)
-  if(CONFIG.leadWebhook){
-    try{
-      await fetch(CONFIG.leadWebhook, {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(payload),
-        mode:'cors'
-      });
-    }catch(err){ /* fail open, still send the user through */ }
-  }
-
-  // Conversion events (the Meta-trackable signal for the broad campaign)
-  fireEvent('Lead', {content_name:'spinzamo_welcome', state:state});
-  fireEvent('CompleteRegistration', {content_name:'spinzamo_welcome', state:state, status:true});
-
-  // Success state + redirect to the app/store (primes the first purchase / FTD)
-  form.style.display = 'none';
-  successBox.classList.add('show');
-  document.getElementById('successCta').href = buildRedirect();
-  setTimeout(() => { location.href = buildRedirect(); }, 1600);
+  // Hand the user off to Spinzamo sign-up, carrying UTMs (no PII in the URL).
+  location.href = buildRedirect();
 });
 
 /* ============================================================
